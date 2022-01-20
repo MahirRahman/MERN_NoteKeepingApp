@@ -77,7 +77,6 @@ function App() {
           date={note.date}
         />
       ))}
-      {/* <Footer /> */}
     </div>
   );
 }
