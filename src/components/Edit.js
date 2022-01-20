@@ -10,7 +10,7 @@ export default function Edit() {
             title: titleSubmitted,
             content: contentSubmitted
         }
-        await fetch(`http://localhost:5000/update/${params.id}`, {
+        await fetch(`https://whispering-sierra-29339.herokuapp.com/update/${params.id}`, {
             method: "POST",
             body: JSON.stringify(editedPerson),
             headers: {
