@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     async function getItems() {
-      const response = await fetch(`http://localhost:5000/note/`);
+      const response = await fetch(`https://whispering-sierra-29339.herokuapp.com/note/`);
   
       if (!response.ok) {
         const message = `An error occured: ${response.statusText}`;
@@ -34,7 +34,7 @@ function App() {
     setItems((prevItems) => {
       return [...prevItems, {title: titleSubmitted, content: contentSubmitted}];
     });
-    await fetch("http://localhost:5000/note/add", {
+    await fetch("https://whispering-sierra-29339.herokuapp.com/note/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -50,7 +50,7 @@ function App() {
   async function deleteItem(id) {
     console.log(items);
     setItems(items.filter((item, index) => item._id !== id));
-    await fetch(`http://localhost:5000/${id}`, {
+    await fetch(`https://whispering-sierra-29339.herokuapp.com/${id}`, {
      method: "DELETE"
    });
   //  navigate("/loading");
