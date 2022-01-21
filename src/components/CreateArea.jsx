@@ -30,7 +30,7 @@ function CreateArea(props) {
 
   return (
     <div>
-      <form className="create-note" onSubmit={submitNote}>
+      <form className="create-note">
         {isExpanded && <input
           onChange={handleChange}
           name="title"
@@ -47,7 +47,7 @@ function CreateArea(props) {
           value={note.content}
         />
         <Zoom in={isExpanded}>
-          <Fab>
+          <Fab onClick={submitNote} ariaLabel="add">
             <AddIcon />
           </Fab>
         </Zoom>
