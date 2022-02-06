@@ -1,20 +1,23 @@
 * {
-    padding: 0;
+    padding: 0 ;
     margin: 0;
     box-sizing: border-box;
   }
-  html {
-    font-family: "Montserrat", sans-serif;
-  }
+  
   body {
-    background: #eee;
+    font-family: "Montserrat";
+    background: #eee !important;
     padding: 0 16px;
   }
   
   header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 20px;
     background-color: #f5ba13;
     margin: auto -16px;
-    padding: 16px 32px;
+    padding: 16px 32px 0px 32px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   }
   
@@ -22,8 +25,125 @@
     color: #fff;
     font-family: "McLaren", cursive;
     font-weight: 200;
+    flex-grow: 4;
   }
   
+  .navbar-items {
+    font-size: 1.3rem;
+    /* flex-basis: 20%; */
+  }
+
+  .dropdown-items p {
+    font-size: 0.8em;
+  }
+
+  #simongamelink {
+    color: white;
+    text-decoration: none;
+  }
+
+  .loginbtn {
+    width: 130px;
+    background-color: #8e6200;
+    color: white;
+    border-radius: 25px;
+    font-size: 1.3rem;
+    line-height: 2.0;
+    border: none;
+    cursor: pointer;
+    /* display: none; */
+  }
+
+  .loginbtn:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+  }
+
+  .googlebtn:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+
+  /* Fade in */
+.after {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+#fadein {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+button a:hover {
+  color: white;
+}
+
+  .dropdown {
+    position: relative;
+    cursor: default;
+    color: white;
+    height: 50px;
+  }
+
+  .dropdown-items {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 50px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-items p {
+    color: black;
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .dropdown:hover .dropdown-items {
+    display: block;
+  }
+  
+  .dropdown-items p:hover {
+    background-color: #f1f1f1;
+  }
+
+  .dropdown:hover .arrow {
+    display: inline-block;
+  }
+
+  .arrow {
+    position: absolute;
+    display: none;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+    left: 0;
+    right: 0;  
+  }
+
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
   footer {
     position: absolute;
     text-align: center;
@@ -45,11 +165,14 @@
     float: left;
   }
   .note h1 {
-    font-size: 1.1em;
     margin-bottom: 6px;
-    word-wrap: break-word
+    word-wrap: break-word;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 1.2em;
   }
   .note p {
+    font-family: "Montserrat";
     font-size: 1.1em;
     margin-bottom: 10px;
     white-space: pre-wrap;
@@ -80,7 +203,7 @@
     width: 480px;
     margin: 30px auto 20px auto;
     background: #fff;
-    padding: 15px;
+    padding: 10px;
     border-radius: 7px;
     box-shadow: 0 1px 5px rgb(138, 137, 137);
   }
@@ -109,21 +232,11 @@
     outline: none;
   }
 
-  /* form.create-note button {
-    position: absolute;
-    right: 18px;
-    bottom: -18px;
-    background: #f5ba13;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    outline: none;
-  } */
-  
+  .muibtn {
+    position: relative;
+    right: auto;
+    bottom: auto;
+  }  
 
   #updates {
     position:relative;
@@ -135,7 +248,7 @@
     left: 343px;
     top: -8px;
     width: 108px;
-    height: 21px;
+    height: 23px;
     background: #f5ba13; 
     border-radius: 50px; 
 } 
@@ -146,5 +259,22 @@
     width: 100px;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
+}
+
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+.h-custom {
+  height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+  .h-custom {
+    height: 100%;
+  }
 }
   
