@@ -1,6 +1,6 @@
 # Other Important File Links
-Simon Game: https://github.com/MahirRahman/SimonGame
-Back End: 
+Simon Game: https://github.com/MahirRahman/SimonGame <br />
+Back End: https://github.com/MahirRahman/MERNProject <br />
 
 # Getting Started with Create React App
 
