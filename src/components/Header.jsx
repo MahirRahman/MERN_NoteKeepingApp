@@ -26,7 +26,7 @@ function Header() {
     <header>
       <h1><HighlightIcon /> Keeper</h1>
       <div>
-        <a onMouseEnter={play} onMouseLeave={noplay} className='navbar-items' id='simongamelink' href="https://www.google.com/"><SportsEsportsIcon fontSize={isPlaying? "large":"inherit"} viewBox= "0 0 24 24" /> Play A Game</a>
+        <a onMouseEnter={play} onMouseLeave={noplay} className='navbar-items' id='simongamelink' href="https://620d5400bb29e66d425d215a--tender-feynman-40f8fd.netlify.app/"><SportsEsportsIcon fontSize={isPlaying? "large":"inherit"} viewBox= "0 0 24 24" /> Play A Game</a>
       </div>
       <div className='navbar-items dropdown' onMouseEnter={enter} onMouseLeave={exit}>
   
